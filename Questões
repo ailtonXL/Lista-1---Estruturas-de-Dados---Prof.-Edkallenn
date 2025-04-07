@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+// Questão 1
+void questao1() {
+    int a, b;
+    printf("Digite dois numeros inteiros: ");
+    scanf("%d %d", &a, &b);
+    printf("Maior: %d\n", (a > b) ? a : b);
+}
+
+// Questão 2
+void questao2() {
+    int a, b, c;
+    printf("Digite tres numeros: ");
+    scanf("%d %d %d", &a, &b, &c);
+    int maior = a;
+    if (b > maior) maior = b;
+    if (c > maior) maior = c;
+    printf("Maior: %d\n", maior);
+}
+
+// Questão 3
+void questao3() {
+    int a, b, c;
+    printf("Digite tres numeros: ");
+    scanf("%d %d %d", &a, &b, &c);
+    int temp;
+    if (a < b) { temp = a; a = b; b = temp; }
+    if (a < c) { temp = a; a = c; c = temp; }
+    if (b < c) { temp = b; b = c; c = temp; }
+    printf("Ordem decrescente: %d %d %d\n", a, b, c);
+}
+
+// Questão 4
+void questao4() {
+    int n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    printf("O numero eh %s\n", (n % 2 == 0) ? "par" : "impar");
+}
+
+// Questão 5
+void questao5() {
+    int n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    if (n > 0) printf("Positivo\n");
+    else if (n < 0) printf("Negativo\n");
+    else printf("Nulo\n");
+}
+
+// Questão 6
+void questao6() {
+    float salario;
+    printf("Digite o salario: ");
+    scanf("%f", &salario);
+    float novo = salario * 1.15;
+    printf("Novo salario: %.2f\n", novo);
+}
+
+// Questão 7
+void questao7() {
+    int idade;
+    printf("Digite a idade: ");
+    scanf("%d", &idade);
+    printf("Pode votar: %s\n", (idade >= 16) ? "Sim" : "Nao");
+}
+
+// Questão 8
+void questao8() {
+    char nome[50];
+    float n1, n2, n3;
+    printf("Nome do aluno: ");
+    scanf("%s", nome);
+    printf("Digite as tres notas: ");
+    scanf("%f %f %f", &n1, &n2, &n3);
+    float media = (n1 + n2 + n3) / 3;
+    printf("Media: %.2f - %s\n", media, (media >= 7) ? "Aprovado" : "Reprovado");
+}
+
+// Questão 9
+void questao9() {
+    int n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+}
+
+// Questão 10
+void questao10() {
+    int n, pares = 0;
+    for (int i = 0; i < 10; i++) {
+        printf("Digite um numero: ");
+        scanf("%d", &n);
+        if (n % 2 == 0) pares++;
+    }
+    printf("Quantidade de pares: %d\n", pares);
+}
+
+// Questão 11
+void questao11() {
+    int v[10];
+    printf("Digite 10 numeros:\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &v[i]);
+    }
+    printf("Valores impares: ");
+    for (int i = 0; i < 10; i++) {
+        if (v[i] % 2 != 0) printf("%d ", v[i]);
+    }
+    printf("\n");
+}
+
+// Questão 12
+void questao12() {
+    int v[10], soma = 0;
+    printf("Digite 10 numeros:\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &v[i]);
+        soma += v[i];
+    }
+    printf("Soma: %d\n", soma);
+}
+
+// Questão 13
+int maior13(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+// Questão 14
+bool ehPar14(int n) {
+    return n % 2 == 0;
+}
+
+// Questão 15
+float media15(int v[], int tamanho) {
+    int soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += v[i];
+    }
+    return soma / (float)tamanho;
+}
