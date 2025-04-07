@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+// Questões
+void questao1();
+void questao2();
+void questao3();
+void questao4();
+void questao5();
+void questao6();
+void questao7();
+void questao8();
+void questao9();
+void questao10();
+void questao11();
+void questao12();
+int maior13(int a, int b);
+bool ehPar14(int n);
+float media15(int v[], int tamanho);
+
+int main() {
+    int opcao;
+    do {
+        printf("\n=== MENU DE EXERCICIOS ===\n");
+        printf("1. Maior entre dois numeros\n");
+        printf("2. Maior entre tres numeros\n");
+        printf("3. Tres numeros em ordem decrescente\n");
+        printf("4. Par ou impar\n");
+        printf("5. Positivo, negativo ou nulo\n");
+        printf("6. Novo salario com 15%% de aumento\n");
+        printf("7. Verifica se pode votar\n");
+        printf("8. Media de aluno e aprovacao\n");
+        printf("9. Tabuada de um numero\n");
+        printf("10. Quantidade de pares entre 10 numeros\n");
+        printf("11. Imprimir impares de vetor\n");
+        printf("12. Soma de valores de vetor\n");
+        printf("13. Função: maior entre dois numeros\n");
+        printf("14. Função: par ou impar\n");
+        printf("15. Função: media de vetor\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1: questao1(); break;
+            case 2: questao2(); break;
+            case 3: questao3(); break;
+            case 4: questao4(); break;
+            case 5: questao5(); break;
+            case 6: questao6(); break;
+            case 7: questao7(); break;
+            case 8: questao8(); break;
+            case 9: questao9(); break;
+            case 10: questao10(); break;
+            case 11: questao11(); break;
+            case 12: questao12(); break;
+            case 13: {
+                int a, b;
+                printf("Digite dois numeros: ");
+                scanf("%d %d", &a, &b);
+                printf("Maior: %d\n", maior13(a, b));
+                break;
+            }
+            case 14: {
+                int n;
+                printf("Digite um numero: ");
+                scanf("%d", &n);
+                printf("Eh par? %s\n", ehPar14(n) ? "Sim" : "Nao");
+                break;
+            }
+            case 15: {
+                int v[10];
+                printf("Digite 10 numeros:\n");
+                for (int i = 0; i < 10; i++) scanf("%d", &v[i]);
+                printf("Media: %.2f\n", media15(v, 10));
+                break;
+            }
+            case 0: printf("Encerrando o programa...\n"); break;
+            default: printf("Opcao invalida!\n");
+        }
+
+    } while (opcao != 0);
+
+    return 0;
+}
